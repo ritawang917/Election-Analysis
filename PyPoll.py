@@ -59,10 +59,12 @@ with open (direct_file) as data_set:
    for candidate_name in candidate_and_counter:
        number_of_voters = candidate_and_counter[candidate_name]
        vote_percentage = (float(number_of_voters) / float(counter)) * 100
-       print (f' {candidate_name}: {vote_percentage:.1f}% ({number_of_voters:,.0f})')
+       print (f' {candidate_name}: {vote_percentage:.1f}% ({number_of_voters:,.0f})')       
           # NOTE that this has to be in the for loop in order for the print to go through each candidate
        if number_of_voters > winning_number_of_votes and vote_percentage > winning_vote_percentage:
           winning_number_of_votes = number_of_voters
           winning_vote_percentage = vote_percentage
           winning_candidate = candidate_name
-   print (f' The winning candidate is {winning_candidate} with a total vote of {winning_number_of_votes:,.0f} and a vote percentage of {winning_vote_percentage:.1f}%')
+   print ("-------------------------")
+   print (f' Winner: {winning_candidate} \n Winning Vote Count: {winning_number_of_votes:,.0f} \n Winning Percentage: {winning_vote_percentage:.1f}%')
+   print ("-------------------------")
