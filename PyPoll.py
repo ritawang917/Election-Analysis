@@ -56,15 +56,20 @@ with open (direct_file) as data_set:
    print (f'{counter:,.0f}')
    print (candidate_name_list)
    print (candidate_and_counter)
+with open(written_file, "w") as text_file:
+   written_text = (f'Election Results \n------------------------- \nTotal Votes: {counter:,.0f} \n-------------------------')
+   text_file.write(written_text)
    for candidate_name in candidate_and_counter:
-       number_of_voters = candidate_and_counter[candidate_name]
-       vote_percentage = (float(number_of_voters) / float(counter)) * 100
-       print (f' {candidate_name}: {vote_percentage:.1f}% ({number_of_voters:,.0f})')       
-          # NOTE that this has to be in the for loop in order for the print to go through each candidate
-       if number_of_voters > winning_number_of_votes and vote_percentage > winning_vote_percentage:
-          winning_number_of_votes = number_of_voters
-          winning_vote_percentage = vote_percentage
-          winning_candidate = candidate_name
-   print ("-------------------------")
-   print (f' Winner: {winning_candidate} \n Winning Vote Count: {winning_number_of_votes:,.0f} \n Winning Percentage: {winning_vote_percentage:.1f}%')
-   print ("-------------------------")
+      number_of_voters = candidate_and_counter[candidate_name]
+      vote_percentage = (float(number_of_voters) / float(counter)) * 100
+      candidate_results = (f' \n{candidate_name}: {vote_percentage:.1f}% ({number_of_voters:,.0f}) \n')
+         # NOTE that the first \n returns the output in a new line such that it does not collide with the output in line 60
+         # NOTE that the second \n returns the next iteration output in a new line
+      text_file.write(candidate_results)
+         # NOTE that this has to be in the for loop in order for the print to go through each candidate
+      if number_of_voters > winning_number_of_votes and vote_percentage > winning_vote_percentage:
+         winning_number_of_votes = number_of_voters
+         winning_vote_percentage = vote_percentage
+         winning_candidate = candidate_name
+   election_summary = (f'\n------------------------- \nWinner: {winning_candidate} \nWinning Vote Count: {winning_number_of_votes:,.0f} \nWinning Percentage: {winning_vote_percentage:.1f}% \n-------------------------')
+   text_file.write(election_summary)
