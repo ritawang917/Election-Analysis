@@ -1,7 +1,7 @@
 # Election-Analysis
 
 ## Project Overview
-An employee from the Colorado Board of Elections gave the task to analysis an election audit of a recent local congressional election using Python programming language.
+An employee from the Colorado Board of Elections gave the task to analyze an election audit of a recent local congressional election using Python programming language.
 
 Task 1: Compute the total number of voters who voted
 Task 2: Create a list of candidates who received votes
@@ -41,8 +41,8 @@ Task 5: Determine the winner of the election (the candidate with the most votes 
 
 ## Summary of Analysis
   
-  There was a total of 369,711 votes. Charles Casper Stockham had a vote percentage of 23.0% totaling to 85,213 supporters who voted for him, Diana DeGette had a vote percentage of 73.8% totaling to 272,892 votes, and Raymon Anthony Doane had a vote percentage of 3.1% totaling to 11,606 votes. From this comparsion, it can be seen that the winner of the local congressional election is Diana Degette.
+  There were a total of 369,711 votes. Charles Casper Stockham had a vote percentage of 23.0% totaling to 85,213 supporters who voted for him, Diana DeGette had a vote percentage of 73.8% totaling to 272,892 votes, and Raymon Anthony Doane had a vote percentage of 3.1% totaling to 11,606 votes. From this comparison, it can be seen that the winner of the local congressional election is Diana Degette.
 
 ## Possible Election-Audit Script Alterations
 
-  The script used to determine the winning candidate and county of a Colorado board of election can be used for other educational purposes. The script can be modified to see how many people from which county voted for a specific candidate; this analysis can then be used to determine if there is a correlation between the county the voters are from and the number of votes given to a respective candidate. This modification can be done by creating a nested for loop to count how many votes each candidate received from the respective counties. Additionally, the script can be used to see if there was a repeat in batch ID number by modifying the script to loop over each batch ID to make sure that there was no repeat to prevent any voter from voting more than once at the election. 
+  The script used to determine the winning candidate and county of a Colorado board of election can be used for other educational purposes. The script can be modified to see how many people from which country voted for a specific candidate; this analysis can then be used to determine if there is a correlation between the county the voters are from and the number of votes given to a respective candidate. This modification can be done by creating a nested for loop to count how many votes each candidate received from the respective counties. Additionally, the script can be used to see if there was a repeat in batch ID number by modifying the script to loop over each batch ID to make sure that there was no repeat to prevent any voter from voting more than once at the election. 
